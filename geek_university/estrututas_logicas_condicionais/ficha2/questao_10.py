@@ -9,3 +9,4 @@ if sexo_usuario == sexo1:
     print("{}: peso ideal {}".format(sexo_usuario, peso_homens))
 elif sexo_usuario == sexo2:
     print("{}: peso ideal {}".format(sexo_usuario, peso_mulheres))
+    
