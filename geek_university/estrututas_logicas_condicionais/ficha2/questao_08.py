@@ -4,7 +4,9 @@ nota2 = float(input("Digite a segunda nota: "))
 
 media_notas = float(nota1+nota2)/2
 
-if nota1 and nota2 > 0.0:
-    print("as notas são válidas e sua média é {}".format(media_notas))
+if nota1 >= 10:
+    print("nota inválida, digite uma nota de 1 a 10")
+elif nota2 >= 10:
+    print("nota inválida, digite uma nota de 1 a 10")
 else:
-    print("tem nota inválida, não é possível gerar a média do aluno")
+    print("A média entre as notas {} e {} é {}".format(nota1, nota2, media_notas))
