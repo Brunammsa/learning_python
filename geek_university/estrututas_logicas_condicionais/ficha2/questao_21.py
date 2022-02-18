@@ -17,3 +17,5 @@ elif opcoes == "4":
         print("Não é possível que o denominador seja 0, por favor, tente novamente")
     else:
         print("{} / {} = {}".format(numero1, numero2, numero1/numero2))
+else:
+    print("Esta opção é inválida, por favor digite uma das opções disponíveis")
