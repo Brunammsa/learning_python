@@ -1,35 +1,59 @@
+import sys
+
 valor_de_a = int(input("Escolha um número de 1 a 100: "))
+
+if valor_de_a <= 0 or valor_de_a >= 100:
+    print("Número inválido")
+    sys.exit()
+
 valor_de_b = int(input("Escolha outro número de 1 a 100: "))
 
-pergunta1 = input("Qual é o resultado da soma dos números escolhidos:{} + {}: ?\n".format(valor_de_a, valor_de_b))
-pergunta2 = input("Qual é o resultado da divisão dos números escolhidos:{} / {}: ?\n".format(valor_de_a, valor_de_b))
-pergunta3 = input("Qual é o resultado da multiplicação dos números escolhidos:{} x {}: ?\n".format(valor_de_a, valor_de_b))
-pergunta4 = input("Digite a diferença entre os números escolhidos:\n")
-pergunta5 = input("Quem é o menor dos números escolhidos:{} ou {}: ?\n".format(valor_de_a, valor_de_b))
+if valor_de_b <= 0 or valor_de_b >= 100:
+    print("Número inválido")
+    sys.exit()
 
-if valor_de_a < 0 and valor_de_a > 100 and valor_de_b < 0  and valor_de_b > 100:
-    print("Valor inválido, por favor, digite um número de 1 a 100")
-    if pergunta1 == valor_de_a+valor_de_b:
-        print("Parabéns, você acertou a primeira questão!")
+# usar isso p não precisar encher de if
+def verifica_resposta(resposta_da_questao, resposta_do_usuario, quantidade_de_acertos):
+    if resposta_da_questao == resposta_do_usuario:
+        print("Parabéns, você acertou!")
+        quantidade_de_acertos = quantidade_de_acertos + 1
     else:
-        print("Você errou, tente novamente")
-    if pergunta2 == valor_de_a/valor_de_b:
-        print("Parabéns, você acertou a segunda questão!")
-    else:
-        print("Você errou, tente novamente")
-    if pergunta3 == valor_de_a*valor_de_b:
-        print("Parabéns, você acertou a terceira questão!")
-    else:
-        print("Você errou, tente novamente")
-    if pergunta4  == valor_de_a-valor_de_b:
-        print("Parabéns, você acertou a quarta questão!")
-    else:
-        print("Você errou, tente novamente")
-    if pergunta5 == valor_de_a < valor_de_b:
-        print("o número {} é o maior é do que {}".format(valor_de_a, valor_de_b))
-    else:
-        print("o número {} é o maior é maior do que {}".format(valor_de_b, valor_de_a))
-else:
-    print("")
+        print("Resposta errada")
 
-#tudo errado, não to conseguindo fazer
+    return quantidade_de_acertos
+
+quantidade_acertos = 0
+
+pergunta1 = int(input("Qual é o resultado da soma {} + {}?\n".format(valor_de_a, valor_de_b)))
+resposta1 = valor_de_a + valor_de_b
+
+quantidade_acertos = verifica_resposta(resposta1, pergunta1, quantidade_acertos)
+
+
+pergunta2 = int(input("Qual é o resultado da soma {} + {}²?\n".format(valor_de_a, (valor_de_b))))
+resposta2 = valor_de_a + (valor_de_b**2)
+
+quantidade_acertos = verifica_resposta(resposta2, pergunta2, quantidade_acertos)
+
+
+pergunta3 = int(input("Qual é o resultado da soma {} + ({}-{}?)\n".format(valor_de_a, valor_de_a, valor_de_b)))
+resposta3 = valor_de_a + (valor_de_a - valor_de_b)
+
+quantidade_acertos = verifica_resposta(resposta3, pergunta3, quantidade_acertos)
+
+
+pergunta4 = int(input("Qual o resultado da soma {}³ + {}²?\n".format(valor_de_a, valor_de_b)))
+resposta4 = (valor_de_a**3) + (valor_de_b**2)
+
+quantidade_acertos = verifica_resposta(resposta4, pergunta4, quantidade_acertos)
+
+
+pergunta5 = int(input("Qual o resultado da soma {} x {} + {} x {}?\n".format(valor_de_a, valor_de_b, valor_de_b, valor_de_a)))
+resposta5 = (valor_de_a*valor_de_b) + (valor_de_b * valor_de_a)
+
+#função com parâmetros nomeados
+quantidade_acertos = verifica_resposta(quantidade_de_acertos = quantidade_acertos, resposta_da_questao = pergunta5, resposta_do_usuario = resposta5)
+
+
+print("O aluno acertou {} questões".format(quantidade_acertos))
+

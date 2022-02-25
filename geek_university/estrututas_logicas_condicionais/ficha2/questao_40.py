@@ -10,4 +10,3 @@ elif custo_fabrica > 12000 and custo_fabrica < 25000:
 elif custo_fabrica > 25000:
     print("O custo do consumidor é de R$ {}".format(custo_fabrica + (custo_fabrica*0.15) + (custo_fabrica*0.20)))
 
-#como faço p deixar o valor como real msm, 18.750 por ex.?
