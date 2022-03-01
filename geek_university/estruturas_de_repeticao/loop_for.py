@@ -41,7 +41,7 @@ for posicoes in range(1, 6):
 
 Enumerate:
 
-nome = Hello Word"
+nome = "Hello Word"
 ((0, "H"), (1, "e"), (2, "l"), (3, "l"), (4, "o""), (5, " "), (6, "W"), (7, "o"), (8, "r"), (9, "d"))
 
 Ex.:
