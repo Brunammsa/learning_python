@@ -1,16 +1,15 @@
-quantidade_limite_multiplos = int(input('Leia um valor inteiro e positivo para "n" >>> '))
-i = int(input('Leia um valor inteiro e positivo para "i" >>> '))
-j = int(input('Leia um valor inteiro e positivo para "j" >>> '))
+n = int(input('Digite o limite de termos >>> '))
+i = int(input('Dê valor ao i >>> '))
+j = int(input('Dê valor ao j >>> '))
 
-multiplos_encontrados = 0
-numero = 0
+valor = 0
+numeros_multiplos = 0
 
-if quantidade_limite_multiplos < 0 or i < 0 or j < 0:
-    print('Valores inválidos, tente novamente')
-else:
-    while multiplos_encontrados < quantidade_limite_multiplos:
-        if numero % i == 0 or numero % j == 0:
-            multiplos_encontrados += 1
-            print(numero)
-        numero += 1
-        
+if i %2 != 0 or j %2 != 0:
+    print('Números inválidos, tente inteiros positivos')
+
+while numeros_multiplos < n:
+    if valor % i == 0 or valor % j == 0:
+        numeros_multiplos += 1
+        print(valor)
+    valor += 1
