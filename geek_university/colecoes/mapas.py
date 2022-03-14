@@ -4,7 +4,7 @@ Continuação de Dicts
 {}
 """
 meses = {'jan': 1, 'fev': 2, 'mar':3}
-"""
+
 # Aqui, aprenderemos a iterar um dict com loops
 
 for mes in meses:
@@ -33,7 +33,7 @@ for mes in meses.values():
 print(meses.items()) # lê-se uma tuplas cm chaves e valores
 for chave, valor in meses.items():
     print('chave: {} valor: {}'.format(chave, valor))
-"""
+
 # Soma*, valor máximo, valor mínimo, tamanho
 # *Se os valores forem int ou reais
 
