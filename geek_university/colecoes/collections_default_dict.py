@@ -1,5 +1,5 @@
 """
-Default Dict: Ao criar um dict utilizando-o,  nós informamos um valor default, podendo utilizar um lmabda para isso. Este valor será utilizado sempre que
+Default Dict: Ao criar um dict utilizando-o,  nós informamos um valor default, podendo utilizar um lambda para isso. Este valor será utilizado sempre que
 não houver um valor definido. Caso tentemos acessar uma chave que não existe, essa chave será criada e o valor default dict será atribuído.
 
 * Tudo visto em dict, vale para cá
