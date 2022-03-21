@@ -6,9 +6,9 @@ vetor_b = [2,2,2,2,2,2,2,2,2,2]
 vetor_c = []
 """
 for elementos in range(10):
-    numeros_a = randint(0, 10)
+    numeros_a = randint(0, 9)
     vetor_a.append(numeros_a)
-    numeros_b = randint(0,10)
+    numeros_b = randint(0,9)
     vetor_b.append(numeros_b)"""
 print(vetor_a)
 print(vetor_b)
@@ -24,4 +24,4 @@ for index in range(10):
 print('{}\n'.format(vetor_c))
 print(len(vetor_c))
 
-# Ta dando certo em partes, mas não quer fazer com range 20
+# ta certo, mas ta errado
