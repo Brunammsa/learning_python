@@ -1,5 +1,5 @@
 resposta = ''
-soma_dos_primos = 0
+soma_dos_primos = []
 quantidade_divisores = 0
 numero = 2
 
@@ -13,7 +13,7 @@ while resposta != 'sair':
                 if numero % i == 0:
                     quantidade_divisores += 1
             if quantidade_divisores == 2:
-                soma_dos_primos += numero
+                soma_dos_primos.append(numero)
             numero += 1
             quantidade_divisores = 0
         print('A soma dos números primos é {}'.format(soma_dos_primos))
