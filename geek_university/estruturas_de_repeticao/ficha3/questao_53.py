@@ -10,3 +10,4 @@ for linhas in range(1, quantidade_linhas + 1):
         iteracao_dos_termos += 1
     print()
 # Difícil p entender, precisa nomear bem as variáveis
+# Triângulo de floyd

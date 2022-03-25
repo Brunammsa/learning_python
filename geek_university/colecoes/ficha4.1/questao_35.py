@@ -9,14 +9,13 @@ while len(numero_a) < 1:
     else:
         numero_a.append(numb1)
         numero_b.append(numb2)
-
-for index in range(0):
-    if numero_a[index] < numero_b[index]:
-        numero_a.extend(numero_b)
-        print(numero_a)
-        print(sum(numero_a))
-    else:
-        numero_b.extend(numero_a)
-        print(numero_b)
-        print(sum(numero_b))
-# tem algo dando errado
+    for index, valor in enumerate(numero_a):
+        if numero_a[index] < numero_b[index]:
+            numero_a.extend(numero_b)
+            print(numero_a)
+            print(sum(numero_a))
+        else:
+            numero_b.extend(numero_a)
+            print(numero_b)
+            print(sum(numero_b))
+# agora ta dando certo, mas com um novo erro de out of range ...
