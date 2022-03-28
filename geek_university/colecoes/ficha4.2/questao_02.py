@@ -1,10 +1,12 @@
-matriz = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+matriz = [[3, 5, 1, 2, 6], [2, 7, 6, 4, 5], [88, 7, 3, 1, 0], [10, 4, 67, 2, 9], [2, 6, 2, 90, 8]]
 
-for l in range(0, 5):
-    for c in range(0, 5):
-        matriz[l][c] = int(input('Digite um número para [{}], [{}] >>> '.format(l, c)))
 
-for l in range(0, 5):
-    for c in range(0, 5):
-        print('[{:^3}]'.format(matriz[l][c]), end='')
-        
+for linha in range(len(matriz)):
+    for coluna in range(len(matriz[linha])):
+        if linha == coluna:
+            matriz[linha][coluna] = 1
+        else:
+            matriz[linha][coluna] = 0
+        print('[{:^3}]'.format(matriz[linha][coluna]), end=' ')
+    print()
+    

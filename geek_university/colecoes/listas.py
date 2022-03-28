@@ -74,7 +74,7 @@ lista1.extend(lista2)
 print(lista1)
 
 
-# Podemos reverter listas
+# Podemos inverter listas
 
 print(lista1)
 lista1.reverse() # *** COM RESERVE *** não ta selecionando o comando mas ta pegando (só ta pegando com int)
