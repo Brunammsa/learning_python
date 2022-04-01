@@ -4,7 +4,5 @@ soma = 0
 for linha in range(len(matriz_01)):
     for coluna in range(len(matriz_01[linha])):
         if linha >= coluna:
-            soma += linha
-            soma += coluna
+            soma += matriz_01[linha][coluna]
 print(soma)
-#tem de dar 13, algo errado

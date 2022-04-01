@@ -3,7 +3,6 @@ soma = 0
 
 for linha in range(len(matriz_01)):
     for coluna in range(len(matriz_01[linha])):
-        if matriz_01[linha][coluna] == 3:
+        if linha + coluna == 2:
             soma += matriz_01[linha][coluna]
-print(soma)
-# deveria dar 5
+            print(soma)
