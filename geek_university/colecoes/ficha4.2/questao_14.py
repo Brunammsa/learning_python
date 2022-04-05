@@ -16,4 +16,7 @@ for linha in range(len(cartela_de_bingo)):
         print('[{:^3}]'.format(cartela_de_bingo[linha][coluna]), end='')
     print()
 
+for i in range(len(cartela_de_bingo)):
+    for j in range(len(cartela_de_bingo[i])):
+        if cartela_de_bingo[i][j] == 
 # agora preciso percorrer cada valor pegar os repetidos e mudar

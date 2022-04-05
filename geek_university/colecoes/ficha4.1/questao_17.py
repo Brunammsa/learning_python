@@ -8,3 +8,4 @@ for index, valor in enumerate(vetor): # index é a posição, e o valor é o val
     if valor < 0: # como só modificaremos os valores negativos, então usaremos só o valor
         vetor[index] = 0 # e se acima o valor for negativo, então o valor do index mudará para 0
 print(vetor)
+

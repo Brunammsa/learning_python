@@ -23,3 +23,5 @@ while True:
         print('A ordem inversa dos números é:\n{}'.format(vetor))
     elif pergunta == 0:
         break
+    elif pergunta != 1 or pergunta != 2:
+        print('código é inválido')

@@ -13,5 +13,3 @@ for i in vetor:
     if i != 0:
         vetor_compactado.append(i)
 print(vetor_compactado)
-
-# não acho que seja exatamente dessa forma, mas foi feito o que a questão pediu

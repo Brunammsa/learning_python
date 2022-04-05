@@ -10,7 +10,7 @@ variavel_soma_a.append(vetor_a[5])
 print('a soma dos valores do vetor é de {}'.format(sum(variavel_soma_a)))
 
 # c)
-vetor_a.insert(4, 100)
+vetor_a[4] = 100
 print(vetor_a)
 
 # d)
