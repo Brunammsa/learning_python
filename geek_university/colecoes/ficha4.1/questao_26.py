@@ -10,5 +10,3 @@ for i in vetor_v:
 
 desvio_padrao = math.sqrt(somatoria * 1/len(vetor_v)-1)
 print(desvio_padrao)
-
-# não sei se ta certo
