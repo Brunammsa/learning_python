@@ -1,4 +1,4 @@
-vetor =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+vetor = [112, 233, 3123, 554, 75, 16, 17, 318, 39, 5510]
 divisores = 0
 
 for i in vetor:
@@ -6,5 +6,5 @@ for i in vetor:
         if i % j == 0:
             divisores += 1
     if divisores == 2:
-        print('o número {} é primo e sua posição é a {}'.format(j, i))
+        print('o número {} é primo e sua posição é a {}'.format(j, vetor.index(j)))
     divisores = 0
