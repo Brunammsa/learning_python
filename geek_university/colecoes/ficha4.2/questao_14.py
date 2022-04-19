@@ -1,7 +1,7 @@
 from random import randint
 
 cartela_de_bingo = []
-valor_repetido = 1
+numero = 0
 
 for i in range(5):
     linha1 = randint(1, 99)
@@ -13,10 +13,10 @@ for i in range(5):
 
 for linha in range(len(cartela_de_bingo)):
     for coluna in range(len(cartela_de_bingo[linha])):
-        print('[{:^3}]'.format(cartela_de_bingo[linha][coluna]), end='')
+        if cartela_de_bingo[linha][coluna] in cartela_de_bingo:
+            numero += 1
+            # quero fazer igual a questão de número primo, mas não to sacando...
+            cartela_de_bingo[linha][coluna] = randint(1, 99)
+        else:
+            print('[{:^3}]'.format(cartela_de_bingo[linha][coluna]), end='')
     print()
-
-for i in range(len(cartela_de_bingo)):
-    for j in range(len(cartela_de_bingo[i])):
-        if cartela_de_bingo[i][j] == 
-# agora preciso percorrer cada valor pegar os repetidos e mudar
