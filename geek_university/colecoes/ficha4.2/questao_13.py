@@ -10,6 +10,7 @@ for linha in range(len(matriz_01)):
     for coluna in range(len(matriz_01[linha])):
         print('[{:^3}]'.format(matriz_01[linha][coluna]), end='')
     print()
+print('\n')
 
 for i in range(len(matriz_01)):
     for j in range(len(matriz_01[i])):

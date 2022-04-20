@@ -1,5 +1,13 @@
-matriz = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] # usar 0 para não precisar utilizar append
+matriz = []
 maiores_de_10 = []
+ordem_matriz = 4
+
+# Inicializando a matriz de ordem 4
+for _ in range(ordem_matriz):
+    linha = []
+    for _ in range(ordem_matriz):
+        linha.append(0)
+    matriz.append(linha)
 
 for l in range(len(matriz)):
     for c in range(len(matriz)):
@@ -10,5 +18,5 @@ print('há {} números maiores do que 10 na matriz abaixo'.format(len(maiores_de
 
 for l in range(len(matriz)):
     for c in range(len(matriz)):
-        print('[{:^3}]'.format(matriz[l][c]), end=' ') # espaçamento de 3 números para não ficar desordenado com números diferentes
+        print('{:^3}'.format(matriz[l][c]), end=' ') # espaçamento de 3 números para não ficar desordenado com números diferentes
     print() # quando acabar o laço, pula linha

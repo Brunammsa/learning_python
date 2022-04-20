@@ -1,22 +1,31 @@
 from random import randint
 
+ordem_da_matriz = 5
 cartela_de_bingo = []
-numero = 0
+numero = 1
+numeros_que_ja_foram_sorteados = []
 
-for i in range(5):
-    linha1 = randint(1, 99)
-    linha2 = randint(1, 99)
-    linha3 = randint(1, 99)
-    linha4 = randint(1, 99)
-    linha5 = randint(1, 99)
-    cartela_de_bingo.append([linha1, linha2, linha3, linha4, linha5])    
+# Inicializando uma matriz de ordem 5
+for _ in range(ordem_da_matriz):
+    linha = []
+    for _ in range(ordem_da_matriz):
+        linha.append(None)
+    cartela_de_bingo.append(linha)
+
+# Inserindo os números aleatórios não repetidos
+for i in range(len(cartela_de_bingo)):
+    for j in range(len(cartela_de_bingo[i])):
+        while numero not in numeros_que_ja_foram_sorteados:
+            numero = randint(1, 100)
+            if numero not in numeros_que_ja_foram_sorteados:
+                numeros_que_ja_foram_sorteados.append(numero)
+            else:
+                numero = 0
+        cartela_de_bingo[i][j] = numero
+        numero = 0
+print(cartela_de_bingo)
 
 for linha in range(len(cartela_de_bingo)):
     for coluna in range(len(cartela_de_bingo[linha])):
-        if cartela_de_bingo[linha][coluna] in cartela_de_bingo:
-            numero += 1
-            # quero fazer igual a questão de número primo, mas não to sacando...
-            cartela_de_bingo[linha][coluna] = randint(1, 99)
-        else:
-            print('[{:^3}]'.format(cartela_de_bingo[linha][coluna]), end='')
+        print('{:^3}'.format(cartela_de_bingo[linha][coluna]), end=' ')
     print()
