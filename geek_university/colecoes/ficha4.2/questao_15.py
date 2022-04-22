@@ -29,3 +29,13 @@ for indice_do_aluno, gabarito_aluno in enumerate(matriz):
     n = 0
     soma_da_pontuacao = 0
 print(resultado)
+
+# Meu jeitinho:
+
+for aluno in range(len(matriz)):
+    for questao in range(len(matriz[aluno])):
+        if matriz[aluno][questao] == gabarito[questao]:
+            soma_da_pontuacao += 1
+    resultado.append('aluno {} fez {}'.format(aluno, soma_da_pontuacao))
+    soma_da_pontuacao = 0
+print(resultado)
