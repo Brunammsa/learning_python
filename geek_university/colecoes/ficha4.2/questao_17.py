@@ -14,23 +14,18 @@ matriz = [
 pior_nota = 0
 posicao_pior_nota = 0
 
-alunos_pior_prova1 = 0
-alunos_pior_prova2 = 0
-alunos_pior_prova3 = 0
+alunos_pior_prova = [0, 0, 0]
 
 for aluno in range(len(matriz)):
     pior_nota = matriz[aluno][0]
     posicao_pior_nota = 0
-    for nota in range(len(matriz[aluno])):
-        if matriz[aluno][nota] < pior_nota:
-            pior_nota = matriz[aluno][nota]
-            posicao_pior_nota = nota
-    if posicao_pior_nota == 0:
-        alunos_pior_prova1 += 1
-    elif posicao_pior_nota == 1:
-        alunos_pior_prova2 += 1
-    else:
-        alunos_pior_prova3 += 1
-print('a quantidade de alunos que se deram mal na prova {} foi {} '.format(1, alunos_pior_prova1))
-print('a quantidade de alunos que se deram mal na prova {} foi {} '.format(2, alunos_pior_prova2))
-print('a quantidade de alunos que se deram mal na prova {} foi {} '.format(3, alunos_pior_prova3))
+    for posicao_nota in range(len(matriz[aluno])):
+        if matriz[aluno][posicao_nota] < pior_nota:
+            pior_nota = matriz[aluno][posicao_nota]
+            posicao_pior_nota = posicao_nota
+    alunos_pior_prova[posicao_pior_nota] = alunos_pior_prova[posicao_pior_nota] + 1
+
+numero_da_prova = 1
+for quantidade_de_alunos in alunos_pior_prova:
+    print('a quantidade de alunos que se deram mal na prova {} foi {} '.format(numero_da_prova, quantidade_de_alunos))
+    numero_da_prova += 1
