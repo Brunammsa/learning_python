@@ -6,7 +6,6 @@ matriz = [
     [5, 5, 7, 6]
 ]
 
-aluno = 1
 maior_nota_final = 0
 
 for linha in range(len(matriz)):
@@ -14,9 +13,10 @@ for linha in range(len(matriz)):
         print('{:^3}'.format(matriz[linha][coluna]), end=' ')
     print()
 # a)
+aluno = 0
 for informacao in matriz:
-    print('as três primeiras informações do {} aluno é: {} {} {}'.format(aluno, informacao[0], informacao[1], informacao[2]))
-    aluno += 1
+    aluno = informacao
+    print('as três primeiras informações do {} aluno é: {} {} {}'.format(informacao, informacao[0], informacao[1], informacao[2]))
 # b)
 for nota_final in matriz:
     media_nota_final = (nota_final[1] + nota_final[2]) / 2
