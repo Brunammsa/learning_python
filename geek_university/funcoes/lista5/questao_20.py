@@ -4,4 +4,3 @@ def fatorial(numero):
         auxiliar *= i
     return auxiliar
 
-print(fatorial(5))
