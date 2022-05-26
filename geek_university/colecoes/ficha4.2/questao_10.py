@@ -1,4 +1,4 @@
-matriz_01 = [[3, 5, 1], [2, 2, 6], [2, 1, 3]]
+matriz_01 = [[3, 5, 11], [67, 2, 6], [2, 1, 3]]
 soma = 0
 
 for linha in range(len(matriz_01)):
