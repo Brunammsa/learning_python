@@ -1,12 +1,9 @@
 
-def substring(string):
+def substring(agulha, palheiro):
 
-    string_splitada = str.split(string)
+    onde_esta = palheiro.find(agulha)
+    return onde_esta
 
-    if string_splitada[0] in string:
-        return string_splitada[0]
+str_teste = "bruno brenand bruna brenand bruna bruno"
 
-    return -1
-
-
-print(substring("hello world"))
+print(substring("vanessa", str_teste))
