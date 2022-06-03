@@ -1,3 +1,12 @@
+def transforma_array_em_str(array):
+    acumulador = "("
+    
+    for i in array:
+        acumulador += " " + i + " "
+    acumulador += ")"
+    
+    return acumulador
+
 
 def quantidade(habitantes):
     soma = 0
@@ -30,12 +39,14 @@ def media_idade_habitantes(habitantes):
 
 
 def pergunta_com_alternativa(texto_pergunta, respostas_validas):
+
     resposta = None
+    respostas_validas_em_str = transforma_array_em_str(respostas_validas)
 
     while resposta not in respostas_validas:
         if resposta != None:
             print('resposta inválida')
-        resposta = input(texto_pergunta)
+        resposta = input(texto_pergunta + respostas_validas_em_str)
 
     return resposta
 
