@@ -23,6 +23,7 @@ res2 = f(res1, a3) Aplica a função passando o resultado do passo 1 mais o terc
 No final de tudo, o reduce() irá retornar o resultado final.
 """
 
+
 from functools import reduce
 
 # Na prática com lambda:
