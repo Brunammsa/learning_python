@@ -41,4 +41,5 @@ res = 1
 for n in dados:
     res = res * n
 
+
 print(res)
